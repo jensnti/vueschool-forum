@@ -13,7 +13,7 @@
           <p class="text-faded text-xsmall">
             By <a href="/">
               {{ userById(thread.userId).name }}
-            </a>, {{ thread.publishedAt }}
+            </a>, <BaseDate :timestamp="thread.publishedAt" />
           </p>
         </div>
         <div class="activity">
@@ -26,7 +26,7 @@
               <a href="#">{{ userById(thread.userId).name }}</a>
             </p>
             <p class="text-xsmall text-faded">
-              {{ thread.publishedAt }}
+              <BaseDate :timestamp="thread.publishedAt" />
             </p>
           </div>
         </div>

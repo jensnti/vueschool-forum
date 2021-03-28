@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="post-date text-faded">
-          {{ post.publishedAt }}
+          <BaseDate :timestamp="post.publishedAt" />
         </div>
       </div>
     </div>
@@ -41,6 +41,7 @@ export default {
     userById(userId) {
       return this.users.find((u) => u.id === userId);
     },
+
   },
 };
 </script>
