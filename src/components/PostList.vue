@@ -23,8 +23,6 @@
 </template>
 
 <script>
-import sourceData from '@/data.json';
-
 export default {
   props: {
     posts: {
@@ -34,7 +32,7 @@ export default {
   },
   data() {
     return {
-      users: sourceData.users,
+      users: this.$store.state.users,
     };
   },
   methods: {

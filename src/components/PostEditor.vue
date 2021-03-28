@@ -29,16 +29,12 @@ export default {
   },
   methods: {
     save() {
-      const postId = `qqqq${Math.random()}`;
       const post = {
-        id: postId,
         text: this.text,
         publishedAt: Math.floor(Date.now() / 1000),
         userId: 'FsCDAk9w8NeXEceLV87arpsXjnQ2',
       };
       this.$emit('save', { post });
-      // this.posts.push(post);
-      // this.thread.posts.push(postId);
       this.text = '';
     },
   },
